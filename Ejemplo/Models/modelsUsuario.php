@@ -49,4 +49,10 @@ class Usuario
     {
         return $this->password;
     }
+
+    //Metodo que consulte la BD
+
+    public function conseguirTodos(){
+        echo 'Imprimiendo todos los usuarios.....';
+    }
 }
