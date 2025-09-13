@@ -20,3 +20,4 @@ if (isset($nombre_controlador) && class_exists($nombre_controlador)) {
 } else {
     echo 'La pagina que buscas no existe';
 }
+//?controller=usuarioController&action=mostrarTodos
