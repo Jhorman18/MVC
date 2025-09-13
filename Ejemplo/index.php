@@ -2,6 +2,7 @@
 
 <?php
 require_once 'controllers/UsuarioController.php';
+require_once 'controllers/ProductoController.php';
 
 $controlador = new UsuarioController;
 
