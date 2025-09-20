@@ -48,22 +48,22 @@ class Usuario
 
     function setNombre($nombre)
     {
-        return $this->nombre;
+        return $this->nombre = $nombre;
     }
 
     function setApellidos($apellidos)
     {
-        return $this->apellidos;
+        return $this->apellidos = $apellidos;
     }
 
     function setEmail($email)
     {
-        return $this->email;
+        return $this->email = $email;
     }
 
     function setPassword($password)
     {
-        return $this->password;
+        return $this->password = $password;
     }
 
     //Metodo que consulte la BD
@@ -79,9 +79,9 @@ class Usuario
     public function crear(){
         $sql = "INSERT INTO t_usuario (id_usuario, nombre, apellido, correo, password, id_rol) VALUES({$this->id_usuario}, '{$this->nombre}', '{$this->apellidos}', '{$this->email}', '{$this->password}', 1);";
         
-        var_dump($sql);
-        // $guardar = $this->db->query($sql);
-        // return $guardar;
+        // var_dump($sql);
+        $guardar = $this->db->query($sql);
+        return $guardar;
     }
    
 }
