@@ -75,5 +75,13 @@ class Usuario
         echo 'Imprimiendo todos los usuarios.....';
     }
 
+
+    public function crear(){
+        $sql = "INSERT INTO t_usuario (id_usuario, nombre, apellido, correo, password, id_rol) VALUES({$this->id_usuario}, '{$this->nombre}', '{$this->apellidos}', '{$this->email}', '{$this->password}', 1);";
+        
+        var_dump($sql);
+        // $guardar = $this->db->query($sql);
+        // return $guardar;
+    }
    
 }
