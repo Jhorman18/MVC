@@ -4,7 +4,7 @@
 
 class UsuarioController{
     public function mostrarTodos(){
-        require_once 'Models/modelsUsuario.php';
+        require_once 'Models/usuarioModels.php';
 
         $usuario = new Usuario();
 

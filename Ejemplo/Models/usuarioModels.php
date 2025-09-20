@@ -1,12 +1,24 @@
 <?php
 
+require_once 'config/database.php';
+
 class Usuario
 {
+    public $id_usuario;
     public $nombre;
     public $apellidos;
     public $email;
     public $password;
 
+    private $db;
+
+    public function __construct(){
+        $this->db =database::conectar();
+    }
+
+    function getId_usuario(){
+        return $this->id_usuario;
+    }
 
     function getNombre()
     {
@@ -15,20 +27,24 @@ class Usuario
 
     function getApellidos()
     {
-        return $this->nombre;
+        return $this->apellidos;
     }
 
     function getEmail()
     {
-        return $this->nombre;
+        return $this->email;
     }
 
     function getPassword()
     {
-        return $this->nombre;
+        return $this->password;
     }
 
     //Set
+
+    function setId_usuario($id_usuario){
+        $this->id_usuario = $id_usuario;
+    }
 
     function setNombre($nombre)
     {
@@ -53,6 +69,11 @@ class Usuario
     //Metodo que consulte la BD
 
     public function conseguirTodos(){
+        // var_dump($this->db);
+        $query = $this->db->query("SELECT * FROM t_usuario");
+        return $query;
         echo 'Imprimiendo todos los usuarios.....';
     }
+
+   
 }
