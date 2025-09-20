@@ -11,6 +11,13 @@ class UsuarioController{
         $todos_los_usuarios = $usuario->conseguirTodos();
 
         require_once './views/usuarios/mostrar-todos.php';
+
+
+
+
+
+
+
     }
 
     public function crear(){
